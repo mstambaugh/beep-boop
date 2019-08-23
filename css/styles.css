@@ -1,5 +1,11 @@
 body {
-  font-family: courier;
-  color: dark blue;
-  
+  font-family: Lucida Console;
+  color: white;
+  background-color: thistle;
+}
+h1 {
+  text-align: center;
+  text-shadow: white 2px;
+  font-size: 60px;
+  font-weight: bolder;
 }

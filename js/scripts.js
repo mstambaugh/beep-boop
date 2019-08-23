@@ -1,6 +1,10 @@
 /// Business Logic
+function validateNumber(localUserNumber) {
+  return !isNaN(localUserNumber) && localUserNumber >= 0;
+}
+
 function beepTranslator(localUserNumber, localUserName) {
-  alert(localUserNumber);
+  $("#result").text("");
   var outputArray = [];
   for (var i = 0; i < localUserNumber; i++) {
     if (i.toString().includes("3")) {
@@ -16,8 +20,6 @@ function beepTranslator(localUserNumber, localUserName) {
   return outputArray;
 }
 
-
-
 /// Front-End Logic
 
 $(document).ready(function() {
@@ -25,7 +27,12 @@ $(document).ready(function() {
     event.preventDefault();
     var userName = $("#userName").val();
     console.log(typeof(userName));
+    // var charactersNotAllowed[ "!", "@", "#", "&", "(", ")", ")", "–", "[", "{", "}", " ] : ; ', ? / *]
     var userNumber = parseInt($("input#userNumber").val());
-    $("#result").text(beepTranslator(userNumber, userName));
+    if (validateNumber(userNumber) === false) {
+      alert("DoEsNotCOmpUTE");
+    } else {
+      $("#result").text(beepTranslator(userNumber, userName));
+    }
   });
 });
