@@ -10,22 +10,25 @@
   </head>
   <body>
     <div class="container">
-      <div class="Jumbotron">
-        <h1>Beep-Boop</h1>
+      <h1>Beep-Boop</h1>
+      <div class="panel">
+        <div class="form-group">
+          <label for="userName">What is your name, friend?</label>
+          <input id="userName" class="form-control" type="text">
+        </div>
       </div>
-      <div class="form-group">
-        <label for="userName">What's your name, friend?</label>
-        <input id="userName" class="form-control" type="text">
-      </div>
-      <div class="form">
-        <form id="userNumber" action="index.html" method="post">
-        <label for="userNumber">Enter a number and receive an encrypted message</label>
-        <input id="userNumber" type= "text">
-        <button type="submit" class="btn btn-dark" name="button">Clicky</button>
-        </form>
+      <div class="panel">
+        <div class="form">
+          <form id="userNumber" action="index.html" method="post">
+          <label for="userNumber">Enter a number and receive an encrypted secret message</label>
+          <input id="userNumber" type= "text">
+          <button type="submit" class="btn btn-dark" name="button">Clicky</button>
+          </form>
+        </div>
       </div>
       <div id="result">
       </div>
+
     </div>
   </body>
 </html>

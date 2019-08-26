@@ -1,4 +1,5 @@
 /// Business Logic
+
 function validateNumber(localUserNumber) {
   return !isNaN(localUserNumber) && localUserNumber >= 0;
 }
@@ -6,7 +7,7 @@ function validateNumber(localUserNumber) {
 function beepTranslator(localUserNumber, localUserName) {
   $("#result").text("");
   var outputArray = [];
-  for (var i = 0; i < localUserNumber; i++) {
+  for (var i = 0; i <= localUserNumber; i++) {
     if (i.toString().includes("3")) {
       outputArray.push(" I'm sorry, " + localUserName + ", I'm afraid I can't do that");
     } else if (i.toString().includes("2")) {
@@ -26,8 +27,7 @@ $(document).ready(function() {
   $("#userNumber").submit(function() {
     event.preventDefault();
     var userName = $("#userName").val();
-    console.log(typeof(userName));
-    // var charactersNotAllowed[ "!", "@", "#", "&", "(", ")", ")", "–", "[", "{", "}", " ] : ; ', ? / *]
+    // console.log(userName);
     var userNumber = parseInt($("input#userNumber").val());
     if (validateNumber(userNumber) === false) {
       alert("DoEsNotCOmpUTE");

@@ -1,11 +1,20 @@
 body {
-  font-family: Lucida Console;
-  color: white;
-  background-color: thistle;
+  font-family: courier;
+  background-color: #b0a8b5;
 }
 h1 {
   text-align: center;
-  text-shadow: white 2px;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: bolder;
+  color: white;
+}
+.panel {
+  background-color: #212F3C;
+  text-align: center;
+  color: #a19cad;
+  padding: 30px
+}
+
+button {
+  background-color: white;
 }
